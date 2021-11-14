@@ -18,6 +18,8 @@
 		4D78DB4727412FB90060735C /* MyPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78DB4627412FB90060735C /* MyPageVC.swift */; };
 		4D78DB4927412FD00060735C /* MyTownVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78DB4827412FD00060735C /* MyTownVC.swift */; };
 		4D78DB4B274131C80060735C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78DB4A274131C80060735C /* TabBarController.swift */; };
+		4D78DB4F2741333B0060735C /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78DB4E2741333B0060735C /* Image.swift */; };
+		4D78DB512741334E0060735C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78DB502741334E0060735C /* Color.swift */; };
 		522A3468D6B7367CA5EEC575 /* Pods_Swift_Test_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11E58814565C7931ECE7D5DB /* Pods_Swift_Test_Project.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +38,8 @@
 		4D78DB4627412FB90060735C /* MyPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageVC.swift; sourceTree = "<group>"; };
 		4D78DB4827412FD00060735C /* MyTownVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTownVC.swift; sourceTree = "<group>"; };
 		4D78DB4A274131C80060735C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		4D78DB4E2741333B0060735C /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		4D78DB502741334E0060735C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		A01485484878AC7CDF66A6E1 /* Pods-Swift_Test_Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Test_Project.debug.xcconfig"; path = "Target Support Files/Pods-Swift_Test_Project/Pods-Swift_Test_Project.debug.xcconfig"; sourceTree = "<group>"; };
 		CEE4938192DCEF89B8BABCAD /* Pods-Swift_Test_Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Test_Project.release.xcconfig"; path = "Target Support Files/Pods-Swift_Test_Project/Pods-Swift_Test_Project.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,8 +87,9 @@
 		4D5DFE34274111650045039A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				4D5DFE2E2741112D0045039A /* Info.plist */,
 				4D5DFE292741112D0045039A /* Assets.xcassets */,
+				4D78DB4D274132CD0060735C /* Const */,
+				4D78DB4C2741329E0060735C /* Config */,
 				4D5DFE38274111AD0045039A /* Storyboard */,
 			);
 			path = Resource;
@@ -175,6 +180,23 @@
 				4D78DB4227412F700060735C /* WritingVC.swift */,
 			);
 			path = Writing;
+			sourceTree = "<group>";
+		};
+		4D78DB4C2741329E0060735C /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				4D5DFE2E2741112D0045039A /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		4D78DB4D274132CD0060735C /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				4D78DB4E2741333B0060735C /* Image.swift */,
+				4D78DB502741334E0060735C /* Color.swift */,
+			);
+			path = Const;
 			sourceTree = "<group>";
 		};
 		9AB939C9303503843E29EC21 /* Pods */ = {
@@ -329,12 +351,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D78DB4927412FD00060735C /* MyTownVC.swift in Sources */,
+				4D78DB4F2741333B0060735C /* Image.swift in Sources */,
 				4D78DB3A27412E640060735C /* HomeVC.swift in Sources */,
 				4D5DFE212741112B0045039A /* AppDelegate.swift in Sources */,
 				4D78DB4727412FB90060735C /* MyPageVC.swift in Sources */,
 				4D78DB4B274131C80060735C /* TabBarController.swift in Sources */,
 				4D78DB4527412FA30060735C /* ChattingVC.swift in Sources */,
 				4D78DB4327412F700060735C /* WritingVC.swift in Sources */,
+				4D78DB512741334E0060735C /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,7 +510,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L2NP7U5487;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Swift_Test_Project/Resource/Info.plist;
+				INFOPLIST_FILE = Swift_Test_Project/Resource/Config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -515,7 +539,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L2NP7U5487;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Swift_Test_Project/Resource/Info.plist;
+				INFOPLIST_FILE = Swift_Test_Project/Resource/Config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
