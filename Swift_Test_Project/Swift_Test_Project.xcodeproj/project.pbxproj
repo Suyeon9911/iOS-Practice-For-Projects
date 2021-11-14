@@ -13,6 +13,7 @@
 		4D5DFE282741112B0045039A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5DFE262741112B0045039A /* Main.storyboard */; };
 		4D5DFE2A2741112D0045039A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D5DFE292741112D0045039A /* Assets.xcassets */; };
 		4D5DFE2D2741112D0045039A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5DFE2B2741112D0045039A /* LaunchScreen.storyboard */; };
+		4D5DFE3B274118350045039A /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4D5DFE3A274118350045039A /* .swiftlint.yml */; };
 		522A3468D6B7367CA5EEC575 /* Pods_Swift_Test_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11E58814565C7931ECE7D5DB /* Pods_Swift_Test_Project.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		4D5DFE292741112D0045039A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D5DFE2C2741112D0045039A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D5DFE2E2741112D0045039A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D5DFE3A274118350045039A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		A01485484878AC7CDF66A6E1 /* Pods-Swift_Test_Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Test_Project.debug.xcconfig"; path = "Target Support Files/Pods-Swift_Test_Project/Pods-Swift_Test_Project.debug.xcconfig"; sourceTree = "<group>"; };
 		CEE4938192DCEF89B8BABCAD /* Pods-Swift_Test_Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Test_Project.release.xcconfig"; path = "Target Support Files/Pods-Swift_Test_Project/Pods-Swift_Test_Project.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -45,6 +47,7 @@
 		4D5DFE142741112A0045039A = {
 			isa = PBXGroup;
 			children = (
+				4D5DFE3A274118350045039A /* .swiftlint.yml */,
 				4D5DFE1F2741112B0045039A /* Swift_Test_Project */,
 				4D5DFE1E2741112B0045039A /* Products */,
 				9AB939C9303503843E29EC21 /* Pods */,
@@ -120,7 +123,6 @@
 				A01485484878AC7CDF66A6E1 /* Pods-Swift_Test_Project.debug.xcconfig */,
 				CEE4938192DCEF89B8BABCAD /* Pods-Swift_Test_Project.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -144,6 +146,7 @@
 				4D5DFE1A2741112A0045039A /* Frameworks */,
 				4D5DFE1B2741112A0045039A /* Resources */,
 				14C066EA49F433E343A7A778 /* [CP] Embed Pods Frameworks */,
+				4D5DFE39274117760045039A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -192,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D5DFE3B274118350045039A /* .swiftlint.yml in Resources */,
 				4D5DFE2D2741112D0045039A /* LaunchScreen.storyboard in Resources */,
 				4D5DFE2A2741112D0045039A /* Assets.xcassets in Resources */,
 				4D5DFE282741112B0045039A /* Main.storyboard in Resources */,
@@ -239,6 +243,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		4D5DFE39274117760045039A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
