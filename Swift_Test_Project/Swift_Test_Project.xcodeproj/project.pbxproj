@@ -422,7 +422,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L2NP7U5487;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Swift_Test_Project/Info.plist;
+				INFOPLIST_FILE = Swift_Test_Project/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -451,7 +451,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L2NP7U5487;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Swift_Test_Project/Info.plist;
+				INFOPLIST_FILE = Swift_Test_Project/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
