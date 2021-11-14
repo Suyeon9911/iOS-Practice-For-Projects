@@ -13,6 +13,7 @@ final class TabBarController: UITabBarController {
         super.viewDidLoad()
         makeTabBarItems()
         setTabBarAppearance()
+        makeBorder()
     }
     
     // tabBar item 선택 시 애니메이션 적용
@@ -66,5 +67,11 @@ extension TabBarController {
         UITabBarItem.appearance().setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 10, weight: .regular)],for: .normal)
         UITabBar.appearance().tintColor = Color.daangnBlack1
         UITabBar.appearance().unselectedItemTintColor = Color.daangnBlack1
+    }
+    
+    private func makeBorder() {
+        tabBar.layer.borderColor = Color.daangnGray1.cgColor
+        tabBar.layer.borderWidth = 1
+        tabBar.layer.masksToBounds = true
     }
 }

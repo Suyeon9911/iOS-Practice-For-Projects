@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BaseNavigationController: UINavigationController {
+final class BaseNavigationController: UINavigationController {
 
     override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
@@ -32,7 +32,7 @@ extension BaseNavigationController {
         appearance.shadowColor = Color.daangnGray1
         
         navigationBar.standardAppearance = appearance
-        navigationBar.scrollEdgeAppearance = navigationBar.standardAppearance
+        navigationBar.scrollEdgeAppearance = appearance
         navigationBar.tintColor = .black
         
     }
