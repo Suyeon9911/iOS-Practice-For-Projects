@@ -9,7 +9,7 @@ import UIKit
 
 import Then
 
-class MainNavigationController: BaseNavigationController {
+final class MainNavigationController: BaseNavigationController {
     
     //Mark: - Properties
     private lazy var logoItem = UIBarButtonItem().then {
@@ -56,7 +56,9 @@ extension MainNavigationController {
     private func initNavigationItem(navigationItem: UINavigationItem?) {
         let spacing = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
         spacing.width = 6
-        navigationItem?.leftBarButtonItems = []
+        navigationItem?.leftBarButtonItems = [logoItem, spacing, downArrowButtonItem]
+        navigationItem?.rightBarButtonItems = [alarmButtonItem, spacing, categoryButtonItem, spacing, searchButtonItem ]
+        
         
     }
     
