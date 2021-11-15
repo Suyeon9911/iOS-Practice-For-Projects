@@ -7,6 +7,7 @@
 
 import UIKit
 
+import SnapKit
 import Then
 
 final class WritingVC: UIViewController {
@@ -23,12 +24,24 @@ final class WritingVC: UIViewController {
         $0.setTitleColor(Color.daangnGray3, for: .disabled)
     }
     
+    private let tableView = UITableView().then{
+        $0.allowsSelection = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
     }
 }
 
+extension WritingVC {
+    private func setDelegation() {
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
+}
 extension WritingVC {
     @objc
     private func buttonDidTapped(_ sender: UIButton) {
@@ -40,6 +53,37 @@ extension WritingVC {
             dismiss(animated: true, completion: nil)
         default:
             break
+        }
+    }
+}
+
+extension WritingVC: UITableViewDelegate {
+    
+}
+
+extension WritingVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 7
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+}
+
+extension WritingVC {
+    func setLayouts() {
+        setViewHierarchies()
+        setConstraints()
+    }
+    
+    func setViewHierarchies() {
+        view.addSubviews(tableView)
+    }
+    
+    func setConstraints() {
+        tableView.snp.makeConstraints{
+            $0.edges.equalToSuperview()
         }
     }
 }
