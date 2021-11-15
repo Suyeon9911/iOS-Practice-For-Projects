@@ -22,6 +22,7 @@ final class WritingVC: UIViewController {
         $0.setTitle("완료", for: .normal)
         $0.setTitleColor(Color.daangnOrange, for: .normal)
         $0.setTitleColor(Color.daangnGray3, for: .disabled)
+        $0.titleLabel?.font = .systemFont(ofSize: 15, weight: .semibold)
     }
     
     private lazy var tableView = UITableView().then{
@@ -29,6 +30,7 @@ final class WritingVC: UIViewController {
         $0.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         $0.registerReusableCell(PhotoTVC.self)
         $0.registerReusableCell(TextFieldTVC.self)
+        $0.registerReusableCell(TagTVC.self)
     }
     
     override func viewDidLoad() {
@@ -92,7 +94,7 @@ extension WritingVC: UITableViewDataSource {
         case 2:
             let cell = UITableViewCell()
             cell.textLabel?.text = "카테고리 선택"
-            cell.textLabel?.font = .systemFont(ofSize: 15)
+            cell.textLabel?.font = .systemFont(ofSize: 15, weight: .semibold)
             cell.textLabel?.snp.makeConstraints {
                 $0.centerY.equalToSuperview()
                 $0.leading.equalToSuperview().inset(16)
@@ -114,6 +116,17 @@ extension WritingVC: UITableViewDataSource {
             let cell: TextFieldTVC = tableView.dequeueReusableCell(indexPath: indexPath)
             cell.type = .button
             cell.setPlaceholder(with: "₩ 가격")
+            return cell
+        case 4:
+            let cell: TagTVC = tableView.dequeueReusableCell(indexPath: indexPath)
+            cell.makeTagButtons(with: "중고", "미개봉", "상태 양호", "하자 약간")
+            cell.type = .title
+            return cell
+            
+        case 5:
+            let cell: TagTVC = tableView.dequeueReusableCell(indexPath: indexPath)
+            cell.makeTagButtons(with: "대면", "택배")
+            cell.type = .titleWithSubtitle
             return cell
         default:
             return UITableViewCell()
