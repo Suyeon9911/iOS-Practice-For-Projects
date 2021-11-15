@@ -12,6 +12,7 @@
 		4D0F282F27428886009F4BE7 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0F282E27428886009F4BE7 /* UICollectionView+Reusable.swift */; };
 		4D0F2832274288E0009F4BE7 /* PhotoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0F2831274288E0009F4BE7 /* PhotoCVC.swift */; };
 		4D0F283427428973009F4BE7 /* PhotoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0F283327428973009F4BE7 /* PhotoTVC.swift */; };
+		4D0F28362742CE5D009F4BE7 /* TextFieldTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0F28352742CE5D009F4BE7 /* TextFieldTVC.swift */; };
 		4D5DFE212741112B0045039A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5DFE202741112B0045039A /* AppDelegate.swift */; };
 		4D5DFE2A2741112D0045039A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D5DFE292741112D0045039A /* Assets.xcassets */; };
 		4D5DFE2D2741112D0045039A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5DFE2B2741112D0045039A /* LaunchScreen.storyboard */; };
@@ -36,6 +37,7 @@
 		4D0F282E27428886009F4BE7 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
 		4D0F2831274288E0009F4BE7 /* PhotoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCVC.swift; sourceTree = "<group>"; };
 		4D0F283327428973009F4BE7 /* PhotoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTVC.swift; sourceTree = "<group>"; };
+		4D0F28352742CE5D009F4BE7 /* TextFieldTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTVC.swift; sourceTree = "<group>"; };
 		4D5DFE1D2741112B0045039A /* Swift_Test_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Test_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D5DFE202741112B0045039A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D5DFE292741112D0045039A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			children = (
 				4D0F2831274288E0009F4BE7 /* PhotoCVC.swift */,
 				4D0F283327428973009F4BE7 /* PhotoTVC.swift */,
+				4D0F28352742CE5D009F4BE7 /* TextFieldTVC.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				4D0F2832274288E0009F4BE7 /* PhotoCVC.swift in Sources */,
 				4D0F282B27427FFB009F4BE7 /* UITableView+Reusable.swift in Sources */,
 				4D0F282F27428886009F4BE7 /* UICollectionView+Reusable.swift in Sources */,
+				4D0F28362742CE5D009F4BE7 /* TextFieldTVC.swift in Sources */,
 				4D5DFE212741112B0045039A /* AppDelegate.swift in Sources */,
 				4D78DB4727412FB90060735C /* MyPageVC.swift in Sources */,
 				4D78DB4B274131C80060735C /* TabBarController.swift in Sources */,

@@ -26,8 +26,9 @@ final class WritingVC: UIViewController {
     
     private lazy var tableView = UITableView().then{
         $0.allowsSelection = false
-        $0.registerReusableCell(PhotoTVC.self)
         $0.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        $0.registerReusableCell(PhotoTVC.self)
+        $0.registerReusableCell(TextFieldTVC.self)
     }
     
     override func viewDidLoad() {
@@ -64,6 +65,8 @@ extension WritingVC: UITableViewDelegate {
         switch indexPath.row {
         case 0:
             return 109
+        case 1, 2, 3:
+            return 64
         default:
             return 100
         }
@@ -80,6 +83,16 @@ extension WritingVC: UITableViewDataSource {
         switch indexPath.row {
         case 0:
             let cell: PhotoTVC = tableView.dequeueReusableCell(indexPath: indexPath)
+            return cell
+        case 1:
+            let cell: TextFieldTVC = tableView.dequeueReusableCell(indexPath: indexPath)
+            cell.type = .plain
+            cell.setPlaceholder(with: "글 제목")
+            return cell
+        case 3:
+            let cell: TextFieldTVC = tableView.dequeueReusableCell(indexPath: indexPath)
+            cell.type = .button
+            cell.setPlaceholder(with: "₩ 가격")
             return cell
         default:
             return UITableViewCell()
