@@ -24,8 +24,10 @@ final class WritingVC: UIViewController {
         $0.setTitleColor(Color.daangnGray3, for: .disabled)
     }
     
-    private let tableView = UITableView().then{
+    private lazy var tableView = UITableView().then{
         $0.allowsSelection = false
+        $0.registerReusableCell(PhotoTVC.self)
+        $0.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
     }
     
     override func viewDidLoad() {
@@ -58,6 +60,14 @@ extension WritingVC {
 }
 
 extension WritingVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        case 0:
+            return 109
+        default:
+            return 100
+        }
+    }
     
 }
 
@@ -67,7 +77,13 @@ extension WritingVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        switch indexPath.row {
+        case 0:
+            let cell: PhotoTVC = tableView.dequeueReusableCell(indexPath: indexPath)
+            return cell
+        default:
+            return UITableViewCell()
+        }
     }
 }
 

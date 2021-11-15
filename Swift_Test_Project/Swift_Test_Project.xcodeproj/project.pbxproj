@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4D0F282B27427FFB009F4BE7 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0F282A27427FFB009F4BE7 /* UITableView+Reusable.swift */; };
 		4D0F282D27428187009F4BE7 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0F282C27428187009F4BE7 /* UIView+.swift */; };
+		4D0F282F27428886009F4BE7 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0F282E27428886009F4BE7 /* UICollectionView+Reusable.swift */; };
+		4D0F2832274288E0009F4BE7 /* PhotoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0F2831274288E0009F4BE7 /* PhotoCVC.swift */; };
+		4D0F283427428973009F4BE7 /* PhotoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0F283327428973009F4BE7 /* PhotoTVC.swift */; };
 		4D5DFE212741112B0045039A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5DFE202741112B0045039A /* AppDelegate.swift */; };
 		4D5DFE2A2741112D0045039A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D5DFE292741112D0045039A /* Assets.xcassets */; };
 		4D5DFE2D2741112D0045039A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5DFE2B2741112D0045039A /* LaunchScreen.storyboard */; };
@@ -30,6 +33,9 @@
 		11E58814565C7931ECE7D5DB /* Pods_Swift_Test_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Test_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D0F282A27427FFB009F4BE7 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		4D0F282C27428187009F4BE7 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		4D0F282E27428886009F4BE7 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
+		4D0F2831274288E0009F4BE7 /* PhotoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCVC.swift; sourceTree = "<group>"; };
+		4D0F283327428973009F4BE7 /* PhotoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTVC.swift; sourceTree = "<group>"; };
 		4D5DFE1D2741112B0045039A /* Swift_Test_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Test_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D5DFE202741112B0045039A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D5DFE292741112D0045039A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,8 +73,18 @@
 			children = (
 				4D0F282A27427FFB009F4BE7 /* UITableView+Reusable.swift */,
 				4D0F282C27428187009F4BE7 /* UIView+.swift */,
+				4D0F282E27428886009F4BE7 /* UICollectionView+Reusable.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		4D0F2830274288A0009F4BE7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4D0F2831274288E0009F4BE7 /* PhotoCVC.swift */,
+				4D0F283327428973009F4BE7 /* PhotoTVC.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		4D5DFE142741112A0045039A = {
@@ -195,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				4D78DB4227412F700060735C /* WritingVC.swift */,
+				4D0F2830274288A0009F4BE7 /* Cell */,
 			);
 			path = Writing;
 			sourceTree = "<group>";
@@ -366,11 +383,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D0F283427428973009F4BE7 /* PhotoTVC.swift in Sources */,
 				4D78DB4927412FD00060735C /* MyTownVC.swift in Sources */,
 				4D78DB55274134770060735C /* MainNavigationController.swift in Sources */,
 				4D78DB4F2741333B0060735C /* Image.swift in Sources */,
 				4D78DB3A27412E640060735C /* HomeVC.swift in Sources */,
+				4D0F2832274288E0009F4BE7 /* PhotoCVC.swift in Sources */,
 				4D0F282B27427FFB009F4BE7 /* UITableView+Reusable.swift in Sources */,
+				4D0F282F27428886009F4BE7 /* UICollectionView+Reusable.swift in Sources */,
 				4D5DFE212741112B0045039A /* AppDelegate.swift in Sources */,
 				4D78DB4727412FB90060735C /* MyPageVC.swift in Sources */,
 				4D78DB4B274131C80060735C /* TabBarController.swift in Sources */,
