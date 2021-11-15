@@ -9,7 +9,7 @@ import UIKit
 
 // Delegate가 나와버린다라... anyobject... height 업뎃 해주기 ??
 protocol TableViewCellDelegate: AnyObject {
-    func updateTextViewHeight(_ cell:TextViewTVC, _ textView:UITextView)
+    func updateTextViewHeight(_ cell: TextViewTVC, _ textView: UITextView)
 }
 
 final class TextViewTVC: UITableViewCell {
