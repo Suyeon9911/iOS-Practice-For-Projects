@@ -13,6 +13,10 @@
 		4D0F2832274288E0009F4BE7 /* PhotoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0F2831274288E0009F4BE7 /* PhotoCVC.swift */; };
 		4D0F283427428973009F4BE7 /* PhotoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0F283327428973009F4BE7 /* PhotoTVC.swift */; };
 		4D0F28362742CE5D009F4BE7 /* TextFieldTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0F28352742CE5D009F4BE7 /* TextFieldTVC.swift */; };
+		4D0F28382742E50C009F4BE7 /* TagTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0F28372742E50C009F4BE7 /* TagTVC.swift */; };
+		4D0F283B2742E781009F4BE7 /* TagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0F283A2742E781009F4BE7 /* TagButton.swift */; };
+		4D0F283D2742E7C7009F4BE7 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0F283C2742E7C7009F4BE7 /* UIButton+.swift */; };
+		4D0F283F2742EB8B009F4BE7 /* TextViewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0F283E2742EB8A009F4BE7 /* TextViewTVC.swift */; };
 		4D5DFE212741112B0045039A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5DFE202741112B0045039A /* AppDelegate.swift */; };
 		4D5DFE2A2741112D0045039A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D5DFE292741112D0045039A /* Assets.xcassets */; };
 		4D5DFE2D2741112D0045039A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5DFE2B2741112D0045039A /* LaunchScreen.storyboard */; };
@@ -38,6 +42,10 @@
 		4D0F2831274288E0009F4BE7 /* PhotoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCVC.swift; sourceTree = "<group>"; };
 		4D0F283327428973009F4BE7 /* PhotoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTVC.swift; sourceTree = "<group>"; };
 		4D0F28352742CE5D009F4BE7 /* TextFieldTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTVC.swift; sourceTree = "<group>"; };
+		4D0F28372742E50C009F4BE7 /* TagTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTVC.swift; sourceTree = "<group>"; };
+		4D0F283A2742E781009F4BE7 /* TagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButton.swift; sourceTree = "<group>"; };
+		4D0F283C2742E7C7009F4BE7 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		4D0F283E2742EB8A009F4BE7 /* TextViewTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTVC.swift; sourceTree = "<group>"; };
 		4D5DFE1D2741112B0045039A /* Swift_Test_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Test_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D5DFE202741112B0045039A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D5DFE292741112D0045039A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +84,7 @@
 				4D0F282A27427FFB009F4BE7 /* UITableView+Reusable.swift */,
 				4D0F282C27428187009F4BE7 /* UIView+.swift */,
 				4D0F282E27428886009F4BE7 /* UICollectionView+Reusable.swift */,
+				4D0F283C2742E7C7009F4BE7 /* UIButton+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -86,8 +95,18 @@
 				4D0F2831274288E0009F4BE7 /* PhotoCVC.swift */,
 				4D0F283327428973009F4BE7 /* PhotoTVC.swift */,
 				4D0F28352742CE5D009F4BE7 /* TextFieldTVC.swift */,
+				4D0F28372742E50C009F4BE7 /* TagTVC.swift */,
+				4D0F283E2742EB8A009F4BE7 /* TextViewTVC.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		4D0F28392742E76C009F4BE7 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				4D0F283A2742E781009F4BE7 /* TagButton.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 		4D5DFE142741112A0045039A = {
@@ -150,6 +169,7 @@
 		4D5DFE372741118B0045039A /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				4D0F28392742E76C009F4BE7 /* Component */,
 				4D5DFE3C27411DCB0045039A /* Home */,
 				4D78DB4127412F510060735C /* Writing */,
 				4D78DB3B27412EC40060735C /* Base */,
@@ -390,6 +410,7 @@
 				4D78DB4927412FD00060735C /* MyTownVC.swift in Sources */,
 				4D78DB55274134770060735C /* MainNavigationController.swift in Sources */,
 				4D78DB4F2741333B0060735C /* Image.swift in Sources */,
+				4D0F28382742E50C009F4BE7 /* TagTVC.swift in Sources */,
 				4D78DB3A27412E640060735C /* HomeVC.swift in Sources */,
 				4D0F2832274288E0009F4BE7 /* PhotoCVC.swift in Sources */,
 				4D0F282B27427FFB009F4BE7 /* UITableView+Reusable.swift in Sources */,
@@ -400,9 +421,12 @@
 				4D78DB4B274131C80060735C /* TabBarController.swift in Sources */,
 				4D78DB4527412FA30060735C /* ChattingVC.swift in Sources */,
 				4D78DB4327412F700060735C /* WritingVC.swift in Sources */,
+				4D0F283F2742EB8B009F4BE7 /* TextViewTVC.swift in Sources */,
+				4D0F283B2742E781009F4BE7 /* TagButton.swift in Sources */,
 				4D0F282D27428187009F4BE7 /* UIView+.swift in Sources */,
 				4D78DB532741344B0060735C /* BaseNavigationController.swift in Sources */,
 				4D78DB512741334E0060735C /* Color.swift in Sources */,
+				4D0F283D2742E7C7009F4BE7 /* UIButton+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
