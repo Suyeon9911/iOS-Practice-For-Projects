@@ -51,7 +51,30 @@ final class WritingVC: UIViewController {
         setLayouts()
         setToolbar()
         tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 1))
-        
+      
+    private let tableView = UITableView().then {
+        // 셀 선택
+        $0.allowsSelection = false
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setNavigationBar()
+    }
+}
+
+extension WritingVC {
+    private func setNavigationBar() {
+        title = "중고거래 글쓰기"
+        navigationController?.navigationBar.titleTextAttributes = [.font: UIFont.systemFont(ofSize: 19, weight: .regular)]
+        navigationItem.leftBarButtonItem = makeBarButtonItem(with: closeButton)
+        navigationItem.rightBarButtonItem = makeBarButtonItem(with: doneButton)
+    }
+    
+    private func makeBarButtonItem(with button: UIButton) -> UIBarButtonItem {
+        button.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
+        button.addTarget(self, action: #selector(buttonDidTapped(_:)), for: .touchUpInside)
+        return UIBarButtonItem(customView: button)
     }
 }
 
