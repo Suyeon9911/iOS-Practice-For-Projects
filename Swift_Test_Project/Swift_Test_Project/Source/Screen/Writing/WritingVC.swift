@@ -31,11 +31,15 @@ final class WritingVC: UIViewController {
         $0.registerReusableCell(PhotoTVC.self)
         $0.registerReusableCell(TextFieldTVC.self)
         $0.registerReusableCell(TagTVC.self)
+        $0.registerReusableCell(TextViewTVC.self)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setDelegation()
+        setLayouts()
+        tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 1))
         
     }
 }
@@ -69,8 +73,12 @@ extension WritingVC: UITableViewDelegate {
             return 109
         case 1, 2, 3:
             return 64
+        case 4, 5:
+            return 102
+        case 6:
+            return UITableView.automaticDimension
         default:
-            return 100
+            return 0
         }
     }
     
@@ -128,9 +136,28 @@ extension WritingVC: UITableViewDataSource {
             cell.makeTagButtons(with: "대면", "택배")
             cell.type = .titleWithSubtitle
             return cell
+        case 6:
+            let cell: TextViewTVC = tableView.dequeueReusableCell(indexPath: indexPath)
+            cell.delegate = self
+            return cell
         default:
             return UITableViewCell()
         }
+    }
+}
+
+// 사이즈 동적 조절 개 멋져.. 
+extension WritingVC: TableViewCellDelegate {
+    func updateTextViewHeight(_ cell: TextViewTVC , _ textView: UITextView) {
+        let size = textView.bounds.size
+            let newSize = tableView.sizeThatFits(CGSize(width: size.width,
+                                                        height: CGFloat.greatestFiniteMagnitude))
+            if size.height != newSize.height {
+                UIView.setAnimationsEnabled(false)
+                tableView.beginUpdates()
+                tableView.endUpdates()
+                UIView.setAnimationsEnabled(true)
+            }
     }
 }
 
